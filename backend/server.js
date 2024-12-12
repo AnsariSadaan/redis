@@ -13,7 +13,6 @@ const database = new MongoClient(process.env.MONGO_URL)
 database.connect().then(()=> console.log("database connected successfull"))
 const db = database.db('crud');
 const usersCollection = db.collection('users');
-const usersName = db.collection('name');
 
 app.post('/add-user', async (req, res)=> {
     const userData = req.body;
